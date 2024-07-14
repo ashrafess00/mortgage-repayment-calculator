@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+
+
+<body class="grid place-items-center bg-slate-300">
+  <div class="flex flex-col md:flex-row max-w-screen-xl md:rounded-xl overflow-hidden">
+    <!-- right side -->
+    <div class="gap-10 flex flex-col flex-1 bg-white p-5 md:p-8">
+      <div class="flex justify-between flex-wrap items-center">
+        <h3 class="font-black  text-2xl text-slate-700 mr-8">Mortage Calculator</h3>
+        <p class="text-slate-500 underline">Clear All</p>
+      </div>
+
+      <!-- mortage amount -->
+      <div>
+        <label for="ma" class="text-slate-500 font-medium mb-2 block">Mortgage Amount</label>
+        <div class="flex bg-white border border-slate-600 rounded overflow-hidden">
+          <div class="w-10 h-100 bg-slate-400 text-slate-100 flex justify-center items-center text-center">$</div>
+          <input id="ma" class="outline-0 p-2 border-0 ring-0 appearance-none bg-inherit block w-full" type="text"/>
+        </div>
+      </div>
+      
+      <!-- mortage Term -->
+      <div class="flex-end">
+        <label for="mt" class="text-slate-500 font-medium mb-2 block">Mortgage Term</label>
+        <div class="flex bg-white border border-slate-600 rounded overflow-hidden">
+          <input id="mt" class="outline-0 p-2 border-0 ring-0 appearance-none bg-inherit block w-full" type="text"/>
+          <div class="w-20 h-100 bg-slate-400 text-slate-100 font-bold flex justify-center items-center text-center">years</div>
+        </div>
+      </div>
+
+      <!-- Interest Rate -->
+      <div class="">
+        <label for="ir" class="text-slate-500 font-medium mb-2 block">Interest Rate</label>
+        <div class="flex bg-white border border-slate-600 rounded overflow-hidden">
+          <input id="ir" class="outline-0 p-2 border-0 ring-0 appearance-none bg-inherit block w-full" type="text"/>
+          <div class="w-10 h-100 bg-slate-400 text-slate-100 font-bold flex justify-center items-center text-center">%</div>
+        </div>
+      </div>
+
+      <!-- Mortgage type  -->
+      <div class="text-slate-700">
+          <label for="repayment" class="w-full mb-5 ring-2 rounded-md ring-[#C2D75B] bg-[#BED746]  block p-2">
+            <input class="mr-2" id="repayment" name="mortage-type" type="radio" value="">
+            Repayment
+          </label>
+          <label for="repayment2" class="w-full ring-2 rounded-md ring-slate-400  block p-2">
+            <input class="mr-2" id="repayment2" name="mortage-type" type="radio" value="">
+            Repayment
+          </label>
+      </div>
+
+      <button class="bg-[#C2D75B] p-4 rounded-full text-slate-700 font-bold">📅 Calculate Repayments</button>
+    </div>
+
+    <!-- left side -->
+    <div class=" flex-1 bg-slate-800 p-5 md:p-8 text-white md:rounded-bl-[9rem] right-side-results right-side-results relative">
+      <h3 class="mb-5 text-2xl font-bold mb-2 text-slate-200">Your Results</h3>
+      <p class="mb-10 text-slate-300 tracking-wide leading-relaxed">Your results are shown below based on the information you provided. To adjust the results. edit the form and click "calculate repayments" again.</p>
+      <div class="flex flex-col bg-slate-900 p-4 border-t-4 border-t-[#C2D75B] rounded-t-lg">
+        <p class="mb-2 text-slate-300">Your monthly repayments</p>
+        <p class="mb-12 border-b-2 pb-12 border-b-slate-500 text-[#C2D75B] text-5xl font-bold">$1,707.74</p>
+        <p class="text-slate-300 mb-2">Total you'll repay over the term</p>
+        <p class="text-slate-200 text-2xl font-bold">$539,322.94</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
